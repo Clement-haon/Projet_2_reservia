@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'Raleway_Regular';
+    src: url(Raleway_Regular.ttf);
+}
+body {
+	font-family: 'Raleway_Regular', sans-serif;
+	display: flex;
+	justify-content: center;
+}
+#bloc_page
+{
+    width: 100%;
+	max-width: 1200px;
+}
+#titre_principal
+{
+    display: flex;
+    justify-content: space-between;
+}
+#titre_principal nav ul
+{
+    display: flex;
+    list-style-type: none;
+}
+#titre_principal nav ul li
+{
+    font-size: 0.8em;
+    margin: 20px;
+
+}
+header h1
+{
+    font-size: 1.3em;
+
+}
+header p 
+{
+    font-size: 0.8em;
+}
+form
+{
+    display: flex;
+    border: solid 1px #F2F2F2;
+    border-radius: 10px;
+    max-width: 380px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+form label .fas
+{
+    display: flex;
+    background-color: #F2F2F2;
+    padding: 13px;
+    flex: 1;
+}
+form input.search
+{
+    display: flex;
+    font-size: 0.8em;
+    border: none;
+    font-weight: bold;
+    padding-left: 10px;
+}
+form input.submit
+{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-size: 0.9em;
+    border: none;
+    background-color: #0065FC;
+    padding: 10px;
+    color: white;
+}
+
+#filtres ul 
+{
+    display: flex;
+    font-size: 0.9em;
+    align-items: center;
+    padding-left: 0;
+    list-style-type: none;
+    font-weight: bold;
+
+}
+#filtres li 
+{
+    height: 47px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 0.9em;
+    border: solid 3px #F2F2F2;
+    margin: 0 15px 0 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+    border-left: none;
+    font-weight: bold;
+    
+
+}
+#filtres .fas 
+{
+    height: 25px;
+    width: 25px;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DEEBFF; 
+    color: #0065FC;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+#nblog p
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+#nblog p .fas
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1px;
+    max-height: 1px;
+    color: #0065FC;
+    background-color: white;
+    border: solid 1px grey;
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 10px;
+    
+}
+section
+{
+    display: flex;
+    justify-content: space-between;
+}
+article
+{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    border: solid 2px #F2F2F2;
+    margin-right: 20px;
+    border-radius: 30px;
+    background-color: #F2F2F2;
+
+}
+aside
+{
+    display: flex;
+    flex: 1;
+    border: solid 2px #F2F2F2;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #F2F2F2;
+}
+article h1
+{
+    margin: 30px 0 0 30px;
+}
+#resultsearch
+{
+    display: flex;
+    max-width: 800px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#resultsearch .element
+{
+    margin: 15px;
+    border: solid 3px white;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: white;
+    height: 200px;
+    width: 200px;
+
+}
+.description:nth-child(1n)
+{
+    background-color: yellow;
+}
+
+.element .description
+{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     border: solid 2px black;
+}
+.description h1
+{
+    font-size: 0.9em;
+    margin: 4px 0 4px 7px;
+    border: none 5px black;
+}
+.description h2
+{
+    font-size: 0.7em;
+    margin: 4px 0 4px 7px;
+
+}
+.description p
+{
+    margin: 3px 0 4px 7px;
+}
+.description .fas
+{
+    color: #0065FC;
+}
+.description span .fas
+{
+    color: #DEEBFF;
+}
