@@ -76,7 +76,6 @@ form input.submit
 #filtres ul 
 {
     display: flex;
-    font-size: 0.9em;
     align-items: center;
     padding-left: 0;
     list-style-type: none;
@@ -85,9 +84,11 @@ form input.submit
 }
 #filtres li 
 {
+    height: 47px;
     display: flex;
     align-items: center;
     text-transform: capitalize;
+    font-size: 0.9em;
     border: solid 3px #F2F2F2;
     margin: 0 15px 0 15px;
     padding-right: 15px;
@@ -126,78 +127,119 @@ form input.submit
     max-height: 1px;
     color: #0065FC;
     background-color: white;
-    border: solid 1px grey;
+    border: 1px solid #DEEBFF;
+    border-style: ;
     border-radius: 50%;
     padding: 6px;
     margin-right: 10px;
     
 }
-section
+.center
 {
     display: flex;
-    justify-content: space-between;
 }
-article
+.center .containers
 {
-    display: flex;
-    flex-direction: column;
-    flex: 2;
-    border: solid 2px #F2F2F2;
-    margin-right: 20px;
-    border-radius: 30px;
     background-color: #F2F2F2;
+    max-height: 600px;
+    border: solid 2px #F2F2F2;
+    border-radius: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
 
 }
-aside
+.containers .element
 {
-    display: flex;
-    flex: 1;
-    border: solid 2px #F2F2F2;
-    padding: 15px;
-    border-radius: 30px;
-    background-color: #F2F2F2;
-}
-article h1
-{
-    margin: 30px 0 0 30px;
-}
-#resultsearch
-{
-    display: flex;
-    max-width: 800px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-#resultsearch .element
-{
-    margin: 15px;
     border: solid 3px white;
     border-radius: 30px;
     overflow: hidden;
     background-color: white;
-    height: 200px;
-    width: 200px;
+    margin: 15px;
+    box-shadow: 0px 5px 4px #e0e0e0;
 
 }
-.description:nth-child(1n)
+.center h1
 {
-    background-color: yellow;
+    padding: 30px 0 0 15px;
+    margin: 0;
+    font-weight: bold;
+
+}
+.center article
+{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin-right: 30px;
+}
+.center h4
+{
+    padding: 10px 0 20px 15px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.center aside
+{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+#resultsearch
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#resultsearch .element
+{
+
+    height: 200px;
+    width: 205px;
+
 }
 
 .element .description
 {
      display: flex;
      flex-direction: column;
-     justify-content: flex-end;
-     border: solid 2px black;
 }
-.description h1
+#resultsearch .element img
+{
+    height: 120px;
+    width: 205px;
+    object-fit: cover;
+}
+#resultpopulaire
+{
+    display: flex;
+    flex-direction: column;
+
+}
+#resultpopulaire .element
+{
+    display: flex;
+    flex-direction: row;
+    height: 140px;
+    width: 330px;
+}
+#resultpopulaire .element img
+{
+    height: 140px;
+    width: 150px;
+    object-fit: cover;
+}
+#resultpopulaire .description
+{
+    display: flex;
+    flex-direction: column;
+}
+.description h2
 {
     font-size: 0.9em;
     margin: 4px 0 4px 7px;
-    border: none 5px black;
 }
-.description h2
+.description h3
 {
     font-size: 0.7em;
     margin: 4px 0 4px 7px;
@@ -205,7 +247,7 @@ article h1
 }
 .description p
 {
-    margin: 3px 0 4px 7px;
+    margin: 0 0 4px 7px;
 }
 .description .fas
 {
@@ -214,4 +256,31 @@ article h1
 .description span .fas
 {
     color: #DEEBFF;
+}
+.low
+{
+    margin-top: 40px;
+}
+#activity
+{
+    display: flex;
+    justify-content: space-between;
+}
+article .box
+{
+    max-height: 450px;
+    max-width: 250px;
+    border: solid 2px white;
+    border-radius: 30px;
+    box-shadow: 0px 5px 4px #e0e0e0;
+    overflow: hidden;
+}
+.box img
+{
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+}
+.box h2{
+    font-size: 0.9em;
 }
