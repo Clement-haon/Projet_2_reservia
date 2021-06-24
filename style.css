@@ -638,6 +638,9 @@ footer p {
     form input.search {
         padding: 21.2px 25px 21.2px 30px;
         font-size: 1.3em;
+        padding-left: 20px;
+        padding-right: 20px;
+        position: relative;
     }
     form button span {
         display: none;
@@ -709,11 +712,13 @@ footer p {
     #populaire {
         border-radius: unset;
         padding: 40px 70px 40px 70px;
+        gap: unset;
     }
     main .element-populaire {
         max-width: unset;
         min-height: unset;
         max-height: 280px;
+        margin-top: 30px;
     }
     main .element-populaire .imgcontains {
         width:42%;
@@ -750,12 +755,14 @@ footer p {
         flex-wrap: wrap;
         background-color: white;
         padding: 40px 70px 40px 70px;
+        gap: unset;
     }
     #hebergement h1 {
         font-size: 2.5em;
     }
     .element-search {
         max-height: 400px;
+        margin-top: 30px;
     }
     .element-search .imgcontains {
         height: 63%;
