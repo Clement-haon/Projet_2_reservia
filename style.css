@@ -159,11 +159,11 @@ form label .fas {
 form input.search {
     display: flex;
     font-size: 0.8em;
-    border: none;
+    border: solid 1px #F2F2F2;
+    border-right: hidden;
+    border-left: hidden;
     font-weight: bold;
     padding: 13px 8px 13px 13px;
-    border-top: solid 1px #F2F2F2;
-    border-bottom: solid 1px #F2F2F2;
     background-color: white;
 }
 form button {
@@ -642,6 +642,7 @@ footer p {
         padding-right: 20px;
         border-left: hidden;
         border-right: hidden;
+        position: relative;
     }
     form button span {
         display: none;
@@ -656,7 +657,6 @@ footer p {
         color: white;
         border: none;
         border-radius: 10px;
-        margin-left: -10px;
     }
     /*filtre*/
     #filtres {
