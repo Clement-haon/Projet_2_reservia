@@ -714,6 +714,9 @@ footer p {
         padding: 40px 70px 40px 70px;
         gap: unset;
         display: block;
+        grid-template-rows: unset;
+        grid-template-areas: unset;
+    
     }
     main .element-populaire {
         max-width: unset;
