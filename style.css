@@ -634,6 +634,7 @@ footer p {
     }
     form label .fas {
         padding: 30px;
+        position: absolute;
     }
     form input.search {
         padding: 21.2px 25px 21.2px 30px;
@@ -656,6 +657,7 @@ footer p {
         border: none;
         border-radius: 10px;
         margin-left: -10px;
+        position: absolute;
     }
     /*filtre*/
     #filtres {
@@ -664,7 +666,7 @@ footer p {
         margin-top: 50px;
     }
     #filtres h2 {
-        font-size: 1em;
+        font-size: 1.6em;
     }
     #filtres .line2 {
         display: block;
