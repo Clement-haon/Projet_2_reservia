@@ -713,6 +713,7 @@ footer p {
         border-radius: unset;
         padding: 40px 70px 40px 70px;
         gap: unset;
+        display: block;
     }
     main .element-populaire {
         max-width: unset;
