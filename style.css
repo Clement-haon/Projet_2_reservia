@@ -634,14 +634,14 @@ footer p {
     }
     form label .fas {
         padding: 30px;
-        position: absolute;
     }
     form input.search {
         padding: 21.2px 25px 21.2px 30px;
         font-size: 1.3em;
         padding-left: 20px;
         padding-right: 20px;
-        position: relative;
+        border-left: hidden;
+        border-right: hidden;
     }
     form button span {
         display: none;
@@ -657,7 +657,6 @@ footer p {
         border: none;
         border-radius: 10px;
         margin-left: -10px;
-        position: absolute;
     }
     /*filtre*/
     #filtres {
