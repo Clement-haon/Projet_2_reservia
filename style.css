@@ -615,6 +615,7 @@ footer p {
         border-top: none;
         border-bottom: 2px solid #0065fc;
         font-weight: bold;
+        color: #8C8C8D;
     }
     
     .login,
