@@ -806,19 +806,19 @@ footer p {
         gap: unset;
     }
     .element-search {
-        max-height: 400px;
+        max-height: 430px;
         margin-top: 30px;
         border-radius: 40px;
     }
     .element-search .imgcontains {
-        height: 70%;
+        height: 66%;
         border-radius: 40px 40px 0 0;
     }
     .element-search img {
         border-radius: 40px 40px 0 0;
     }
     #hebergement .detailscontains {
-        height: 28%;
+        height: 30%;
         margin-left: 20px;
     }
     .detailscontains h2 {
