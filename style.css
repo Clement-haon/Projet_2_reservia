@@ -577,6 +577,16 @@ footer a:hover {
     body {
         position: absolute;
     }
+    .top-title {
+        grid-template-columns: 3fr 7fr 1fr 50px 1fr 50px 1fr;
+    }
+    #filtres  {
+        display: block;
+    }
+    #filtres button {
+        margin-top: 15px;
+        margin-left: 0;
+    }
     #hebergement {
         grid-template-columns: 1fr 1fr;
         grid-template-areas : 'title title'
@@ -585,13 +595,6 @@ footer a:hover {
                              'result5 result6'
                              'displayMore displayMore'
     }    
-    #filtres  {
-        display: block;
-    }
-    #filtres button {
-        margin-top: 15px;
-        margin-left: 0;
-    }
     #box-bottom {
         display: grid;
         grid-template-columns: 1fr 1fr;
