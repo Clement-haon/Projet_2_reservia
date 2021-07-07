@@ -22,9 +22,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
 }
@@ -45,13 +42,22 @@ a{
     text-decoration: none;
   }
 /* End of reset CSS */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap');
-
+@font-face {
+	font-family: "Raleway";
+    font-weight: normal;
+	src: url('Raleway-Regular.ttf');
+}
+@font-face {
+	font-family: "Raleway";
+	font-weight: bold;
+	src: url('Raleway-Bold.ttf');
+}
 * {
     box-sizing:border-box;
     margin:0;
     padding:0;
     font-family: 'Raleway', sans-serif;
+    font-weight: normal;
 }
 header {
     margin: 0 30px 0 30px;
@@ -62,7 +68,7 @@ main {
 /*Barre de navigation */
 .top-title {
 display: grid;
-grid-template-columns: 1fr 7fr 1fr 20px 1fr 20px 1fr;
+grid-template-columns: 1fr 7fr 1fr 50px 1fr 50px 1fr;
 grid-template-rows: 100px;
 grid-template-areas: "logo . hebergement . activity . login";
 }
@@ -93,10 +99,10 @@ justify-content: center;
 border-top: 2px solid #F2F2F2;
 }
 
-.hebergement:hover,
-.activity:hover {
+.nav-hebergement:hover,
+.nav-activity:hover {
 border-top: 2px solid #0065FC;
-color: #8C8C8D;
+color: #0065FC;
 font-weight: bold;
 }
 
@@ -123,7 +129,7 @@ color: #0065FC;
 }
 #titre-principal h1 {
     margin-bottom: 15px;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 20px;
 }
 #titre-principal p {
@@ -174,6 +180,9 @@ form button {
     cursor: pointer;
     height: 48px;
 }
+form button span {
+    font-weight: bold;
+}
 button {
     border: none;
     background-color: white;
@@ -194,6 +203,8 @@ button .fas {
 #filtres h2 {
     margin-right: 15px;
     font-size: 15px;
+    font-weight: bold;
+
 
 }
 #filtres .line2 {
@@ -214,7 +225,7 @@ button .fas {
     font-size: 15px;
     margin: 0 15px 0 15px;
     border: 2px solid #F2F2F2;
-    padding-right: 40px;
+    padding-right: 20px;
     border-radius: 25px;
     font-weight: 600;  
     height: 40px;  
@@ -237,19 +248,21 @@ button .fas {
     align-items: center;
     margin-bottom: 30px;
     margin-top: 30px;
+    font-size: 13px;
 }
 #nblog p .fas {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1px;
-    max-height: 1px;
+    width: 20px;
+    height: 20px;
     color: #0065FC;
     background-color: white;
     border: solid 1px #8C8C8D;
     border-radius: 50%;
     padding: 6px;
-    margin-right: 10px;    
+    margin-right: 10px;  
+    font-size: 10px;
 }
 /* GRID-CENTER*/
 #boxcenter {
@@ -467,7 +480,6 @@ main .element-populaire img {
 
 .activitydescription {
     padding-left:13px;
-    font-weight: bold;
     height: 45px;
     position: absolute;
     bottom: 0;
@@ -478,6 +490,9 @@ main .element-populaire img {
     overflow: hidden;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+.activitydescription p {
+    font-weight: bold;
 }
 #column2 {
     display: flex;
@@ -553,8 +568,15 @@ footer p {
     font-size: 14px;
     margin: 10px 0 10px 30px;
 }
+footer a:hover {
+    color: #0065FC;
+    font-weight: bold;
+}
 
-@media only screen and (max-width : 1180px) and (min-width : 990px) {
+@media only screen and (max-width : 1180px) and (min-width : 591px) {
+    body {
+        position: absolute;
+    }
     #hebergement {
         grid-template-columns: 1fr 1fr;
         grid-template-areas : 'title title'
@@ -570,14 +592,38 @@ footer p {
         margin-top: 15px;
         margin-left: 0;
     }
-    .boxactivity {
-        max-height: 425px;
+    #box-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'title title'
+                             'column1 column3'
+                             'boxactivity-1 boxactivity-2'
+                             'equal-1 equal-2';
+    }
+    /*Barre de recherche */
+    form {
+        height: 65px;
+        max-width: 400px;
+    }
+    form label .fas {
+        height: 65px;
+        padding: 23px;
+    }
+    form input.search {
+        font-size: 1.2em;
+    }
+    form button {
+        font-size: 0.9em;
+        padding: 12.35px;
+        height: 65px;
     }
 }
-@media only screen and (max-width : 990px) {
+@media only screen and (max-width : 590px) {
     body {
         max-height: unset;
         max-width: unset;
+        position: absolute;
+
     }
     header {
         margin: unset;
@@ -592,7 +638,7 @@ footer p {
     }
     .logo img {
         width: 60%;
-        padding-left: 60px;
+        padding-left: 30px;
 
     }
     .nav-hebergement, .nav-activity {
@@ -600,12 +646,12 @@ footer p {
         border-top: none;
         margin-top: 30px;
         margin-bottom: 60px;
-        font-size: 40px;
+        font-size: 30px;
     }
     .nav-hebergement a,
     .nav-activity a {
-        font-weight: 300;
-        padding-bottom: 30px;
+        font-weight: normal;
+        padding-bottom: 20px;
         padding-left: 60px;
         padding-right: 60px;
 
@@ -614,8 +660,6 @@ footer p {
     .nav-activity:hover {
         border-top: none;
         border-bottom: 2px solid #0065fc;
-        font-weight: bold;
-        color: #8C8C8D;
     }
     
     .login,
@@ -623,48 +667,47 @@ footer p {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 700;
         color: #0065fc;
-        margin-right: 60px;
+        margin-right: 20px;
     }
     #titre-principal {
-        font-size: 40px;
+        font-size: 33px;
     }
     #titre-principal h1 {
-        margin-left: 60px;
-        margin-right: 60px;
-        font-size: 56px;
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size: 50px;
     }
     #titre-principal p {
-        margin: 40px 60px 40px 60px;
+        margin: 40px 30px 40px 30px;
     }
     /* barre de recherche */
     form {
-        font-size: 2em;
-        margin-left: 88px;
+        margin-left: 58px;
+        margin-right: 50px;
         height: 94px;
-        max-width: 75%;
+        max-width: 100%;
         border: solid 2px #F2F2F2;
     }
     form label {
         margin-left: -28px;
-
     }
     form label .fas {
-        padding: 30px;
+        padding: 34px;
         height: 94px;
-        font-size: 40px;
+        font-size: 33px;
         border-bottom-left-radius: 30px;
         border-top-left-radius: 30px;
     }
     form input.search {
-        padding: 21px 0 21px 50px;
+        padding: 21px 0 21px 30px;
         font-size: 35px;
         border-left: hidden;
         border-right: hidden;
         position: relative;
-        width: 80%;
+        width: 100%;
     }
     form button {
         height: 94px;
@@ -679,7 +722,7 @@ footer p {
         background-color: #0065FC;
         display: flex;
         flex: 1;
-        font-size: 40px;
+        font-size: 33px;
         justify-content: center;
         padding: 18px;
         color: white;
@@ -689,7 +732,8 @@ footer p {
     /*filtre*/
     #filtres {
         display: block;
-        margin-left: 60px;
+        margin-left: 30px;
+        margin-right: 30px;
         margin-top: 50px;
     }
     #filtres h2 {
@@ -702,7 +746,7 @@ footer p {
         height: 90px;   
         border-radius: 45px;
         border: 4px solid #F2F2F2;
-        font-size: 2em;
+        font-size: 30px;
         margin: 30px 40px 0 15px;
         padding-right: 50px;
     }
@@ -710,20 +754,20 @@ footer p {
         height: 90px;
         width: 90px;
         margin-left: -20px;
-        margin-right: 40px;
+        margin-right: 20px;
         font-size: 36px;
     }
     #nblog {
-        margin: 60px 90px 60px 60px;
+        margin: 60px 30px 60px 30px;
     }
     #nblog p{
-        font-size: 37px;
+        font-size: 31px;
     }
     #nblog p .fas {
         max-height: unset;
         max-width: unset;
         margin-top: -38px;
-        margin-right: 36px;
+        margin-right: 25px;
         height: 52px;
         width: 52px;
         padding: 20px;
@@ -754,7 +798,7 @@ footer p {
         font-size: 2.5em;
     }
     #boxcenter h2 {
-        font-size: 2.2em;
+        font-size: 2em;
     }
     #boxcenter h3 {
         font-size: 1.9em;
@@ -762,7 +806,7 @@ footer p {
     /* populaire*/
     #populaire {
         border-radius: unset;
-        padding: 70px 70px 60px 70px;
+        padding: 70px 30px 60px 30px;
         gap: unset;
         display: block;
         grid-template-rows: unset;
@@ -803,7 +847,7 @@ footer p {
         display: flex;
         flex-wrap: wrap;
         background-color: white;
-        padding: 70px 70px 50px 70px;
+        padding: 70px 30px 50px 30px;
         gap: unset;
     }
     .element-search {
@@ -835,8 +879,8 @@ footer p {
     #box-bottom {
         display: flex;
         flex-direction: column;
-        padding-left: 70px;
-        padding-right: 70px;
+        padding-left: 30px;
+        padding-right: 30px;
         gap: unset;
     }
     #box-bottom h1 {
@@ -860,6 +904,7 @@ footer p {
         height: 100px;
         width: 100%;
         padding-left:25px;
+        font-weight: bold;
         font-size: 2em;
         background-color: white;
         border-bottom-left-radius: 40px;
@@ -939,13 +984,16 @@ footer p {
     footer {
         display: flex;
         flex-direction: column;
-        padding: 40px;
+        padding: 30px;
     }
     footer h1 {
-        font-size: 26px;
+        font-size: 30px;
+        margin-left: 0;
     }
     footer p {
-        font-size: 20px;
+        font-size: 25px;
         margin-bottom: 20px;
+        margin-left: 0;
     }
+}
 }
