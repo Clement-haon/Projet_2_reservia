@@ -183,6 +183,10 @@ form button {
 form button span {
     font-weight: bold;
 }
+form button:hover {
+    color: black;
+}
+
 button {
     border: none;
     background-color: white;
@@ -216,7 +220,8 @@ button .fas {
     flex-direction: row;
 }
 #filtres button:hover {
-    background-color: #F2F2F2;
+    background-color: #0065FC;
+    color: white;
 }
 #filtres button {
     display: flex;
@@ -321,7 +326,7 @@ button .fas {
 #boxcenter h2 {
     font-weight:bold;
     color: black;
-    font-size: 15px;
+    font-size: 16px;
 }
 #boxcenter h3 {
     font-size: 14px;
@@ -436,7 +441,6 @@ main .element-populaire img {
     flex-direction: column;
     height: auto;
     justify-content: space-between;
-    padding-right: 25px;
 }
 #populaire h3 {
     padding-top: 12px;
@@ -568,69 +572,13 @@ footer p {
     font-size: 14px;
     margin: 10px 0 10px 30px;
 }
-footer a:hover {
+a:hover {
     color: #0065FC;
     font-weight: bold;
 }
-
-@media only screen and (max-width : 1180px) and (min-width : 591px) {
-    body {
-        position: absolute;
-    }
-    .top-title {
-        grid-template-columns: 3fr 7fr 1fr 50px 1fr 50px 1fr;
-    }
-    #filtres  {
-        display: block;
-    }
-    #filtres button {
-        margin-top: 15px;
-        margin-left: 0;
-    }
-    #hebergement {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas : 'title title'
-                             'result1 result2'
-                             'result3 result4'
-                             'result5 result6'
-                             'displayMore displayMore'
-    }    
-    #box-bottom {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'title title'
-                             'column1 column3'
-                             'boxactivity-1 boxactivity-2'
-                             'equal-1 equal-2';
-    }
-    /*Barre de recherche */
-    form {
-        height: 65px;
-        max-width: 400px;
-    }
-    form label .fas {
-        height: 65px;
-        padding: 23px;
-    }
-    form input.search {
-        font-size: 1.2em;
-    }
-    form button {
-        font-size: 0.9em;
-        padding: 12.35px;
-        height: 65px;
-    }
-}
-@media only screen and (max-width : 590px) {
-    body {
-        max-height: unset;
-        max-width: unset;
-        position: absolute;
-
-    }
-    header {
-        margin: unset;
-    }
+/*First break-point*/
+@media screen and (max-width: 1100px) {
+    /*header*/
     .top-title {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -649,7 +597,7 @@ footer a:hover {
         border-top: none;
         margin-top: 30px;
         margin-bottom: 60px;
-        font-size: 30px;
+        font-size: 1.5rem;
     }
     .nav-hebergement a,
     .nav-activity a {
@@ -670,54 +618,142 @@ footer a:hover {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        font-size: 30px;
+        font-size: 1.5rem;
         font-weight: 700;
         color: #0065fc;
-        margin-right: 20px;
+        margin-right: 30px;
     }
+    /*edit-title*/
     #titre-principal {
-        font-size: 33px;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+
     }
     #titre-principal h1 {
-        margin-left: 30px;
-        margin-right: 30px;
-        font-size: 50px;
+        font-size: 2rem;
     }
-    #titre-principal p {
-        margin: 40px 30px 40px 30px;
-    }
-    /* barre de recherche */
+    /*edit search bar*/
     form {
-        margin-left: 58px;
-        margin-right: 50px;
-        height: 94px;
-        max-width: 100%;
-        border: solid 2px #F2F2F2;
-    }
-    form label {
-        margin-left: -28px;
+        height: 50px;
+        max-width: 400px;
     }
     form label .fas {
-        padding: 34px;
-        height: 94px;
-        font-size: 33px;
-        border-bottom-left-radius: 30px;
-        border-top-left-radius: 30px;
+        height: 50px;
+        padding: 15px;
     }
     form input.search {
-        padding: 21px 0 21px 30px;
-        font-size: 35px;
+        font-size: 1rem;
+    }
+    form button {
+        font-size: 0.9em;
+        padding: 12.35px;
+        height: 48px;
+    }
+    /*edit grid hebergement*/
+    #hebergement {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas : 'title title'
+                             'result1 result2'
+                             'result3 result4'
+                             'result5 result6'
+                             'displayMore displayMore'
+    }    
+    /*edit grid activity*/
+    #box-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'title title'
+                             'column1 column3'
+                             'boxactivity-1 boxactivity-2'
+                             'equal-1 equal-2';
+    }
+}
+/*second break-point tablette*/
+@media screen and (max-width: 924px){
+    /*edit filtres*/
+    #filtres  {
+        display: block;
+    }
+    #filtres button {
+        margin-top: 15px;
+        margin-left: 0;
+    } 
+    /*inversement hebergement et populaire*/
+    #boxcenter {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 20px;
+        gap: unset;
+    }
+    main .element-populaire {
+        max-width: 100%;
+    }
+    /*carre populaire*/
+    #populaire {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    #title-populaire {
+        width: 100%;
+    }
+
+}
+/*third breack-point*/
+@media screen and (max-width: 600px){
+    /*edit header*/
+    header {
+        margin: 0;
+    }
+    .logo img {
+        padding-left: 20px;
+    }
+    .login {
+        margin-right: unset;
+    }
+    .login a {
+        margin-right: 20px;
+        font-size: 1rem;
+    }
+    .nav-hebergement, .nav-activity {
+        font-size: 1rem;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+    .nav-hebergement a,
+    .nav-activity a {
+        font-weight: normal;
+        padding-left: unset;
+        padding-right: unset;
+    }
+    /*edit title*/
+    #titre-principal {
+        margin: 0 20px;
+        font-size: 1rem;
+    }
+    #titre-principal h1 {
+        font-size: 1.5rem;
+    }
+    /*edit search bar pour la longueur*/
+    form {
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: 85%;
+        border: solid 2px #F2F2F2;
+    }
+    form input.search {
         border-left: hidden;
         border-right: hidden;
         position: relative;
         width: 100%;
     }
     form button {
-        height: 94px;
-        border-radius: 30px;
+        border-radius: 10px;
         margin-right: -20px;
+        width: 48px;
 
     }
+    /*new button*/
     form button span {
         display: none;
     }
@@ -725,196 +761,108 @@ footer a:hover {
         background-color: #0065FC;
         display: flex;
         flex: 1;
-        font-size: 33px;
         justify-content: center;
-        padding: 18px;
         color: white;
         border: none;
         border-radius: 30px;
     }
-    /*filtre*/
+    /*filtre en block*/
     #filtres {
         display: block;
-        margin-left: 30px;
-        margin-right: 30px;
-        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     #filtres h2 {
-        font-size: 35px;
+        font-size: 1.2rem;
     }
     #filtres .line2 {
         display: block;
     } 
-    #filtres button {
-        height: 90px;   
-        border-radius: 45px;
-        border: 4px solid #F2F2F2;
-        font-size: 30px;
-        margin: 30px 40px 0 15px;
-        padding-right: 50px;
-    }
-    #filtres button .fas {
-        height: 90px;
-        width: 90px;
-        margin-left: -20px;
-        margin-right: 20px;
-        font-size: 36px;
-    }
+    /*agrandissement nombre de logement*/
     #nblog {
-        margin: 60px 30px 60px 30px;
-    }
-    #nblog p{
-        font-size: 31px;
+        margin: 0 20px;
     }
     #nblog p .fas {
-        max-height: unset;
-        max-width: unset;
-        margin-top: -38px;
-        margin-right: 25px;
-        height: 52px;
-        width: 52px;
-        padding: 20px;
-        font-size: 25px;
+        margin-top: -16px;
     }
-    /*container*/
+    /*reset margin*/
     main {
-        margin: unset;
+        margin: 0;
     }
-    #boxcenter {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-bottom: 20px;
-        gap: unset;
-    }
-    #boxcenter span {
-        font-size: unset;
-    }
-    #boxcenter #afficherPlus {
-        font-size: 34px;
-        margin-top: 60px;
-        padding-bottom: unset;
-    }
-    .starcontains i {
-        font-size: 23px;
-    }
-    #boxcenter h1 {
-        font-size: 2.5em;
-    }
-    #boxcenter h2 {
-        font-size: 2em;
-    }
-    #boxcenter h3 {
-        font-size: 1.9em;
-    }
-    /* populaire*/
     #populaire {
         border-radius: unset;
-        padding: 70px 30px 60px 30px;
-        gap: unset;
-        display: block;
-        grid-template-rows: unset;
-        grid-template-areas: unset;
-    }
-    #populaire #title-populaire {
-        padding-bottom: 40px;
-    }
-    main .element-populaire {
-        max-width: unset;
-        min-height: unset;
-        max-height: 280px;
-        margin-top: 20px;
-        border-radius: 40px;
-    }
-    main .element-populaire .imgcontains {
-        width:42%;
-        height: 280px;
-        border-radius: 40px 40px 0 0;
-    }
-    main .element-populaire img {
-        min-width: 42%;
-        max-height: 270px;
-        border-radius: 40px 0 0 40px;
+        gap: 10px;
+        padding: 40px 20px;
     }
     #populaire .detailscontains {
-        height: unset;
-        margin: 20px 0 20px 40px;
+        margin-left: 25px;
+        margin-bottom: 5px;
     }
-    #populaire .detailscontains h2 {
-        padding-bottom: 20px;
+    #title-populaire {
+        width: 100%;
+        margin-bottom: 20px;
     }
-    #populaire #title-populaire i {
-        font-size: 42px;
-    }
-    /* hebergement*/
+    /*hebergement en flex column bg white*/
     #hebergement {
         display: flex;
         flex-wrap: wrap;
         background-color: white;
-        padding: 70px 30px 50px 30px;
         gap: unset;
+        padding: 25px 20px;
     }
+    /*reglage hauteur element*/
     .element-search {
-        max-height: 430px;
-        margin-top: 30px;
-        border-radius: 40px;
+        margin-top: 20px;
+        border-radius: 20px;
+        max-height: 190px;
     }
     .element-search .imgcontains {
-        height: 66%;
-        border-radius: 40px 40px 0 0;
+        border-radius: 20px 20px 0 0;
+        height: 60%;
     }
     .element-search img {
-        border-radius: 40px 40px 0 0;
+        border-radius: 20px 20px 0 0;
     }
     #hebergement .detailscontains {
-        height: 30%;
-        margin-left: 20px;
+        margin-left: 11px;
+        height: 36%;
     }
-    .detailscontains h2 {
-        font-size: 1.8em;
+    #afficherPlus {
+        padding-top: 25px;
+        padding-bottom: 0;
     }
-    .detailscontains h3 {
-        font-size: 1.7em;
-    }
-    #boxcenter a {
-        font-size: unset;
-    }
-    /* activité */
+    /*passage en flex activity column*/
     #box-bottom {
         display: flex;
         flex-direction: column;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
         gap: unset;
+        margin-bottom: 20px;
     }
     #box-bottom h1 {
-        font-size: 2.5em;
-        margin-bottom: 40px;
-        margin-top: 40px;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
+    /*reglage taille element*/
     .boxactivity {
-        max-height: unset;
-        margin-bottom: 50px;
-        border-radius: 40px;
-    }
-    .boxactivity .img-activity {
-       height: unset;
+        max-height: 200px;
+        border-radius: 20px;
     }
     .boxactivity .img-activity img {
-        height: unset;
-        border-radius: 40px;
+        height: 100%;
+        border-radius: 20px;
+        object-position: 0 27%;
     }
     .activitydescription {
-        height: 100px;
+        height: 25%;
         width: 100%;
-        padding-left:25px;
-        font-weight: bold;
-        font-size: 2em;
         background-color: white;
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
     #column1, #column3 {
-        max-height: 400px;
+        max-height: 200px;
         width: 100%;
     }
     #column1 a,
@@ -929,59 +877,51 @@ footer a:hover {
     #column1 .img-activity img,
     #column3 .img-activity img {
         height: 100%;
-        max-height: 400px;
+        max-height: 200px;
 
     }
     #column2 {
         display: flex;
         flex-direction: column;
-        max-height: 850px;
+        max-height: 440px;
     }
     #doublebox-1 {
         width: 100%;
-        height: 400px;
-        margin-bottom: 50px;
-        border-radius: 40px;
-    }
-    #doublebox-1 .img-activity {
-        height: unset;
-        max-height: 400px;
+        height: 200px;
+        margin-bottom: 20px;
+        border-radius: 20px;
     }
     #doublebox-1 .img-activity img {
         height: unset;
-        max-height: 400px;
+        max-height: 200px;
+        object-position: 0 48%;
     }
 
     #doublebox-2 {
         width: 100%;
-        height: 400px;
-        border-radius: 40px;
-    }
-    #doublebox-2 .img-activity {
-        height: unset;
-        max-height: 400px;
+        height: 200px;
+        border-radius: 20px;
     }
     #doublebox-2 .img-activity img {
-        height: unset;
-        max-height: 400px;
+        height: 100%;
+        object-position: 0 3%;
     }
     #column4 {
         display: block;
-        max-height: 850px;
+        max-height: 440px;
     }
     #column4 .double-equal {
         width: 100%;
-        height: 400px;
-        margin-bottom: 50px;
-        border-radius: 40px;
+        height: 200px;
+        margin-bottom: 20px;
+        border-radius: 20px;
     }
     #column4 .double-equal .img-activity {
-        max-height: 400px;
         width: 100%;
         overflow: hidden;
     }
     #column4 .double-equal .img-activity img {
-        height: 400px;
+        height: 100%;
     }
     /*footer*/
     footer {
@@ -990,13 +930,21 @@ footer a:hover {
         padding: 30px;
     }
     footer h1 {
-        font-size: 30px;
+        font-size: 1.1rem;
         margin-left: 0;
+        margin-top: 20px;
     }
     footer p {
-        font-size: 25px;
+        font-size: 1rem;
         margin-bottom: 20px;
         margin-left: 0;
     }
 }
+@media screen and (max-width: 400px) {
+    /*réglage taille image populaire*/
+    main .element-populaire img {
+        min-width: unset;
+        width: 145px;
+    }   
 }
+
