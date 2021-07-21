@@ -293,7 +293,7 @@ button .fas {
         "displayMore displayMore displayMore";
     background-color: #F2F2F2;
 }
-#hebergement h1 {
+#hebergement h2 {
     grid-area: title;
 }
 
@@ -309,7 +309,7 @@ button .fas {
         "proposition3";
     background-color: #F2F2F2;
 }
-#populaire h1 {
+#populaire h2 {
     grid-area: title;
 }
 
@@ -317,22 +317,22 @@ button .fas {
 #boxcenter {
     margin-bottom: 60px;
 }
-#boxcenter h1 {
+#boxcenter h2 {
     font-weight:bold;
     color: black;
     font-size: larger;
     margin-bottom: 0;
 }
-#boxcenter h2 {
+#boxcenter h3 {
     font-weight:bold;
     color: black;
     font-size: 16px;
 }
-#boxcenter h3 {
+#boxcenter h4 {
     font-size: 14px;
     font-weight: 400;
 }
-#boxcenter h3 span {
+#boxcenter h4 span {
     font-weight: bold;
 }
 #boxcenter span {
@@ -398,7 +398,7 @@ button .fas {
 #populaire #title-populaire {
     display: flex;
 }
-#populaire #title-populaire h1 {
+#populaire #title-populaire h2 {
     margin-right: auto;
 }
 #populaire #title-populaire i {
@@ -442,7 +442,7 @@ main .element-populaire img {
     height: auto;
     justify-content: space-between;
 }
-#populaire h3 {
+#populaire h4 {
     padding-top: 12px;
 }
 
@@ -455,8 +455,8 @@ main .element-populaire img {
     grid-template-areas: "title title title title"
                          "column1 column2 column3 column4";
 }
-#box-bottom h1 {grid-area: title;}
-#box-bottom h1 {
+#box-bottom h2 {grid-area: title;}
+#box-bottom h2 {
     font-weight: bold;
     font-size: larger;
     margin-bottom: -10px;
@@ -495,8 +495,9 @@ main .element-populaire img {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-.activitydescription p {
+.activitydescription h3 {
     font-weight: bold;
+    font-size: 16px;
 }
 #column2 {
     display: flex;
@@ -561,9 +562,9 @@ footer {
     grid-template-areas: 'title title title'
                          'link1 link2 link3';
 }
-footer h1 {grid-area: title;}
+footer h2 {grid-area: title;}
 
-footer h1 {
+footer h2 {
     font-size: 18px;
     font-weight: bold;
     margin: 25px 0 20px 30px;
@@ -575,6 +576,13 @@ footer p {
 a:hover {
     color: #0065FC;
     font-weight: bold;
+}
+/*Media For big screen*/
+@media screen and (min-width:1440px) {
+    body {
+        max-width: 1440px;
+        margin: auto;
+    }
 }
 /*First break-point*/
 @media screen and (max-width: 1100px) {
@@ -635,7 +643,7 @@ a:hover {
     /*edit search bar*/
     form {
         height: 50px;
-        max-width: 400px;
+        /*max-width: 400px;*/
     }
     form label .fas {
         height: 50px;
@@ -840,7 +848,7 @@ a:hover {
         gap: unset;
         margin-bottom: 20px;
     }
-    #box-bottom h1 {
+    #box-bottom h2 {
         margin-bottom: 20px;
         margin-top: 20px;
     }
@@ -929,7 +937,7 @@ a:hover {
         flex-direction: column;
         padding: 30px;
     }
-    footer h1 {
+    footer h2 {
         font-size: 1.1rem;
         margin-left: 0;
         margin-top: 20px;
@@ -946,5 +954,10 @@ a:hover {
         min-width: unset;
         width: 145px;
     }   
+}
+@media screen and (max-width: 340px) {
+    body {
+        min-width: 340px;
+    }
 }
 
