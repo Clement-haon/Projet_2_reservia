@@ -644,6 +644,7 @@ a:hover {
     }
     .top-title .login {
         margin-right: 20px;
+        padding: unset;
     }
     .nav-hebergement, .nav-activity {
         border-bottom: 2px solid #f2f2f2;
