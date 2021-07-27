@@ -13,19 +13,15 @@ HTML CSS integration for the prototype of "reservia"
 <body>
     <header>
         <div class="top-title">
-            <div class="logo">
-                <img src="Reservia@3x.png" alt="Logo Reservia">
-            </div>
-            <div class="nav-hebergement">
-                    <a href="#hebergement">Hébergements</a>
-            </div>
-            <div class="nav-activity">
-                    <a href="#box-bottom">Activités</a>
-            </div>
-            <div class="login">
-                <a href="#">S'inscrire</a>
-            </div>
-        </div>
+            <img src="Reservia@3x.png" alt="Logo Reservia">
+            <nav>
+                <ul class="flex-link">
+                    <li class="nav-hebergement"><a href="#hebergement">Hébergements</a></li>
+                    <li class="nav-activity"><a href="#box-bottom">Activités</a></li>
+                </ul>
+            </nav>
+            <a class="login" href="">S'inscrire</a>
+        </div> 
     </header>
     <main>
         <div id="titre-principal">
@@ -58,7 +54,7 @@ HTML CSS integration for the prototype of "reservia"
             <div id="hebergement">
                 <h2>Hébergements à Marseille</h2>
                 <article id="result1" class="element-search">
-                    <a href="#">
+                    <a href="">
                         <div class="imgcontains">
                             <img src="s/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="auberge canebière">
                         </div>
@@ -76,7 +72,7 @@ HTML CSS integration for the prototype of "reservia"
                     </a>
                 </article>
                 <article id="result2" class="element-search">
-                    <a href="#">
+                    <a href="">
                         <div class="imgcontains">
                             <img src="s/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hotel du port">
                         </div>
@@ -94,7 +90,7 @@ HTML CSS integration for the prototype of "reservia"
                     </a>
                 </article>
                 <article id="result3" class="element-search">
-                    <a href="#">
+                    <a href="">
                         <div class="imgcontains">
                             <img src="s/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel Les mouettes">
                         </div>
@@ -112,7 +108,7 @@ HTML CSS integration for the prototype of "reservia"
                     </a>
                 </article>
                 <article id="result4" class="element-search">
-                    <a href="#">
+                    <a href="">
                         <div class="imgcontains">
                             <img src="s/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="emile guilemot">
                         </div>
@@ -130,7 +126,7 @@ HTML CSS integration for the prototype of "reservia"
                     </a>
                 </article>
                 <article id="result5" class="element-search">
-                    <a href="#">
+                    <a href="">
                         <div class="imgcontains">
                             <img src="s/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge le panier">
                         </div>
@@ -148,7 +144,7 @@ HTML CSS integration for the prototype of "reservia"
                     </a>
                 </article>
                 <article id="result6" class="element-search">
-                    <a href="#">
+                    <a href="">
                         <div class="imgcontains">
                             <img src="s/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hôtel chez Amina">
                         </div>
@@ -165,7 +161,7 @@ HTML CSS integration for the prototype of "reservia"
                         </div>
                     </a>
                 </article>
-                <a id="afficherPlus" href="#">Afficher plus</a>
+                <a id="afficherPlus" href="">Afficher plus</a>
             </div>
             <div id="populaire">
                 <div id="title-populaire">
@@ -173,7 +169,7 @@ HTML CSS integration for the prototype of "reservia"
                     <i class="fas fa-chart-line"></i>
                 </div>
                 <article id="proposition1" class="element-populaire">
-                    <a href="#">
+                    <a href="">
                         <div class="flex-element">
                             <div class="imgcontains">
                                 <img src="s/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="hotel du soleil du matin">
@@ -195,7 +191,7 @@ HTML CSS integration for the prototype of "reservia"
                     </a>
                 </article>
                 <article id="proposition2" class="element-populaire">
-                    <a href="#">
+                    <a href="">
                         <div class="flex-element">
                             <div class="imgcontains">
                                 <img src="s/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="chambre d'hote au coeur de l'eau">
@@ -217,7 +213,7 @@ HTML CSS integration for the prototype of "reservia"
                     </a>
                 </article>
                 <article id="proposition3" class="element-populaire">
-                    <a href="#">
+                    <a href="">
                         <div class="flex-element">
                             <div class="imgcontains">
                                 <img src="m/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hotel tout bleu et blanc">
@@ -243,7 +239,7 @@ HTML CSS integration for the prototype of "reservia"
         <section id="box-bottom">
             <h2>Activités à Marseille</h2>
             <article id="column1" class="boxactivity">
-                <a href="#">
+                <a href="">
                     <div class="img-activity">
                         <img src="m/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux-port">
                         <div class="activitydescription">
@@ -254,7 +250,7 @@ HTML CSS integration for the prototype of "reservia"
             </article>
             <article id="column2" class="boxactivity">
                 <div id="doublebox-1">
-                    <a href="#">
+                    <a href="">
                         <div class="img-activity">
                             <img src="m/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de pomègues">
                             <div class="activitydescription">
@@ -264,7 +260,7 @@ HTML CSS integration for the prototype of "reservia"
                     </a>
                 </div>
                 <div id="doublebox-2">
-                    <a href="#">
+                    <a href="">
                         <div class="img-activity">
                             <img src="s/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul">
                             <div class="activitydescription">
@@ -275,7 +271,7 @@ HTML CSS integration for the prototype of "reservia"
                 </div>
             </article>
             <article id="column3" class="boxactivity">
-                <a href="#">
+                <a href="">
                     <div class="img-activity">
                         <img src="m/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques">
                         <div class="activitydescription">
@@ -286,7 +282,7 @@ HTML CSS integration for the prototype of "reservia"
             </article>
             <article id="column4" class="boxactivity">
                 <div id="equal-1" class="double-equal">
-                    <a href="#">
+                    <a href="">
                         <div class="img-activity">
                             <img src="m/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde">
                             <div class="activitydescription">
@@ -296,7 +292,7 @@ HTML CSS integration for the prototype of "reservia"
                     </a>    
                 </div>
                 <div id="equal-2" class="double-equal">
-                    <a href="#">
+                    <a href="">
                         <div class="img-activity">
                             <img src="m/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp">
                             <div class="activitydescription">
@@ -312,31 +308,31 @@ HTML CSS integration for the prototype of "reservia"
     <footer>
         <div id="link1">
             <h2>A propos</h2>
-            <a href="#">
+            <a href="">
                 <p>Fonctionnement du site</p>
             </a>
-            <a href="#">
+            <a href="">
                 <p>Conditions générales de vente</p>
             </a>
-            <a href="#">
+            <a href="">
                 <p>Données et confidentialité</p>
             </a>
         </div>
         <div id="link2">
             <h2>Nos hébergements</h2>
-            <a href="#">
+            <a href="">
                 <p>Charte qualité</p>
             </a>
-            <a href="#">
+            <a href="">
                 <p>Soumettre votre hôtel</p>
             </a>
         </div>
         <div id="link3">
             <h2>Assistance</h2>
-            <a href="#">
+            <a href="">
                 <p>Centre d'aide</p>
             </a>
-            <a href="#">
+            <a href="">
                 <p>Nous contacter</p>
             </a>
         </div>
